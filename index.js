@@ -61,13 +61,15 @@ Mesh.prototype.createWireMesh = function(hexColor) {
   return wireMesh
 }
 
-Mesh.prototype.createSurfaceMesh = function(material) {
+Mesh.prototype.createSurfaceMesh = function(material, disableShadow) {
   material = material || new this.THREE.MeshNormalMaterial()
   var surfaceMesh  = new this.THREE.Mesh( this.geometry, material )
   surfaceMesh.scale = this.scale
   surfaceMesh.doubleSided = false
-  surfaceMesh.castShadow = true
-  surfaceMesh.receiveShadow = true
+  if (!disableShadow) {
+    surfaceMesh.castShadow = true
+    surfaceMesh.receiveShadow = true
+  }
   this.surfaceMesh = surfaceMesh
   return surfaceMesh
 }
