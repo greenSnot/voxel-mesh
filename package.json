@@ -1,11 +1,11 @@
 {
-  "name": "voxel-mesh",
+  "name": "voxel-mesh-cc",
   "description": "generate a three.js mesh from voxel data",
   "version": "0.3.0",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/maxogden/voxel-mesh.git"
+    "url": "http://github.com/greensnot/voxel-mesh.git"
   },
   "author": {
     "name": "Max Ogden",

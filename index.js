@@ -66,6 +66,8 @@ Mesh.prototype.createSurfaceMesh = function(material) {
   var surfaceMesh  = new this.THREE.Mesh( this.geometry, material )
   surfaceMesh.scale = this.scale
   surfaceMesh.doubleSided = false
+  surfaceMesh.castShadow = true
+  surfaceMesh.receiveShadow = true
   this.surfaceMesh = surfaceMesh
   return surfaceMesh
 }
